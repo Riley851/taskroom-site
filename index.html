@@ -13,22 +13,38 @@
       color: #333;
     }
 
+      .btn {
+        display: inline-block;
+        padding: 12px 24px;
+        margin: 10px;
+        background-color: rgb(82, 86, 124);
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+        transition: background 0.3s ease;
+      }
+
+      .btn:hover {
+        background-color: rgb(42, 44, 65);
+      }
+
     header {
       font-family: 'Bebas Neue', sans-serif;
-      font-size: 28px;
-      background: #6e3b93;
+      font-size: 48px;
+      background: #1E3A8A;
       color: white;
-      padding: 1em;
+      padding: .25em;
       text-align: center;
       text-shadow:
-        -2px -2px 0 #ac7ca9,
-         2px -2px 0 #ac7ca9,
-        -2px  2px 0 #ac7ca9,
-         2px  2px 0 #ac7ca9,
-        -2px  0px 0 #ac7ca9,
-         2px  0px 0 #ac7ca9,
-         0px -2px 0 #ac7ca9,
-         0px  2px 0 #ac7ca9;
+        -2px -2px 0 #000000,
+         2px -2px 0 #000000,
+        -2px  2px 0 #000000,
+         2px  2px 0 #000000,
+        -2px  0px 0 #000000,
+         2px  0px 0 #000000,
+         0px -2px 0 #000000,
+         0px  2px 0 #000000;
     }
 
     nav {
@@ -52,10 +68,6 @@
       font-weight: bold;
     }
 
-    nav a:hover {
-      text-decoration: underline;
-    }
-
     main {
       max-width: 900px;
       margin: 2em auto;
@@ -75,10 +87,9 @@
   <header>
     <h1>TASKROOM.DEV</h1>
     <nav>
-      <a href="#">Home</a>
-      <a href="about">About</a>
-      <a href="contact">Contact</a>
-      <a href="#">Other Things to Come!!</a>
+      <a href="about" class="btn">About</a>
+      <a href="contact" class="btn">Contact</a>
+      <a href="#" class="btn">Other things to come!!</a>
     </nav>
   </header>
 
