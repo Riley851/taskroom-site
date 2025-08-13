@@ -1,0 +1,14 @@
+[
+  {
+    "artist": "Radiohead",
+    "title": "OK Computer",
+    "cover_url": "https://coverartarchive.org/release/9f3e8cd3-9b8f-4a06-9873-f0bbecb8e2aa/front",
+    "ratings": {
+      "lyrics": 9,
+      "vocals": 8,
+      "instrumentals": 10,
+      "production": 10,
+      "enjoyment": 9
+    }
+  }
+]

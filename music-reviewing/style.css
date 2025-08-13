@@ -1,0 +1,12 @@
+.album-card {
+    display: flex;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px 0;
+}
+.album-card img {
+    margin-right: 15px;
+}
+.album-card h3 {
+    margin: 0 0 5px 0;
+}
