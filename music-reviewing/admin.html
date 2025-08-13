@@ -2,19 +2,28 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Albums by Artist</title>
+<title>Admin Album Form</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<h1 id="artist-title"></h1>
-<div id="album-list"></div>
+<h1>Admin Album Form (Local)</h1>
 
-<script src="main.js"></script>
-<script>
-    const urlParams = new URLSearchParams(window.location.search);
-    const artist = urlParams.get('artist');
-    document.getElementById('artist-title').textContent = `Albums by ${artist}`;
-    renderArtist('album-list', artist);
-</script>
+<form id="albumForm">
+    <label>Artist: <input type="text" id="artist" required></label>
+    <label>Title: <input type="text" id="title" required></label>
+    <label>Lyrics (1-10): <input type="number" id="lyrics" min="1" max="10" required></label>
+    <label>Vocals (1-10): <input type="number" id="vocals" min="1" max="10" required></label>
+    <label>Instrumentals (1-10): <input type="number" id="instrumentals" min="1" max="10" required></label>
+    <label>Production (1-10): <input type="number" id="production" min="1" max="10" required></label>
+    <label>Enjoyment (1-10): <input type="number" id="enjoyment" min="1" max="10" required></label>
+    <label>Cover URL: <input type="text" id="cover_url" required></label>
+    <button type="submit">Add Album</button>
+</form>
+
+<h2>Current JSON (paste from albums.json)</h2>
+<textarea id="jsonInput" rows="10" placeholder="Paste albums.json here"></textarea><br>
+<button id="exportBtn">Export Updated JSON</button>
+
+<script src="admin.js"></script>
 </body>
 </html>

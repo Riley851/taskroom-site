@@ -14,8 +14,8 @@ function renderAlbum(album) {
 
     const total = calculateTotal(album.ratings);
     div.innerHTML = `
-        <img src="${album.cover_url}" alt="Cover" width="120"/>
-        <div>
+        <img src="${album.cover_url}" alt="Cover"/>
+        <div class="album-details">
             <h3>${album.artist} - ${album.title}</h3>
             <p>Total: ${total} / 50</p>
             <ul>
@@ -33,6 +33,7 @@ function renderAlbum(album) {
 async function renderList(containerId) {
     const container = document.getElementById(containerId);
     const albums = await loadAlbums();
+    container.innerHTML = "";
     albums.sort((a,b) => calculateTotal(b.ratings) - calculateTotal(a.ratings));
     albums.forEach(album => container.appendChild(renderAlbum(album)));
 }
@@ -40,6 +41,7 @@ async function renderList(containerId) {
 async function renderArtist(containerId, artistName) {
     const container = document.getElementById(containerId);
     const albums = await loadAlbums();
+    container.innerHTML = "";
     albums.filter(a => a.artist.toLowerCase() === artistName.toLowerCase())
           .sort((a,b) => calculateTotal(b.ratings) - calculateTotal(a.ratings))
           .forEach(album => container.appendChild(renderAlbum(album)));
