@@ -1,0 +1,121 @@
+/* not made with AI hehe */
+
+.title {
+  text-align: center;
+  font-family: 'Georgia', serif;
+  color: #2c3e50;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+
+.panel-1 {
+  border: 1px solid #ccc; 
+  border-radius: 5px; 
+  margin: 20px;
+  background-color: #fff; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+}
+
+.panel-heading-1 {
+  background-color: #bfffa5; 
+  padding: 10px 15px; 
+  border-bottom: 1px solid #ddd; 
+  border-top-left-radius: 5px; 
+  border-top-right-radius: 5px; 
+}
+
+.panel-heading-1 h2 {
+  margin: 0; 
+  font-size: 1.2em; 
+  color: #333; 
+}
+
+.panel-body-1 {
+  padding: 15px;
+}
+
+
+.panel-2 {
+  border: 1px solid #ccc; 
+  border-radius: 5px; 
+  margin: 20px;
+  background-color: #fff; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+}
+
+.panel-heading-2 {
+  background-color: #f5f5f5; 
+  padding: 10px 15px; 
+  border-bottom: 1px solid #ddd; 
+  border-top-left-radius: 5px; 
+  border-top-right-radius: 5px;  
+}
+
+.panel-heading-2 h2 {
+  margin: 0; 
+  font-size: 1.2em; 
+  color: #333; 
+}
+
+.panel-body-2 {
+  padding: 1px;
+}
+
+.panel-3 {
+  border: 1px solid #ccc; 
+  border-radius: 5px; 
+  margin: 20px;
+  background-color: #fff; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+}
+
+.panel-heading-3 {
+  background-color: #f5f5f5; 
+  padding: 10px 15px; 
+  border-bottom: 1px solid #ddd; 
+  border-top-left-radius: 5px; 
+  border-top-right-radius: 5px;  
+}
+
+.panel-heading-3 h2 {
+  margin: 0; 
+  font-size: 1.2em; 
+  color: #333; 
+}
+
+
+
+a {
+  text-decoration: none;
+  color: rgb(62, 100, 226); 
+}
+
+a:hover,
+a:focus,
+a:focus-visible {
+  text-decoration: underline;
+}
+
+/* Panels container: side-by-side on wider screens, stacked on small screens */
+.panels {
+  display: flex;
+  gap: 20px; /* space between panels */
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap; /* allow wrapping on narrow screens */
+}
+
+.panels > .panel-1,
+.panels > .panel-2 {
+  flex: 1 1 300px; /* grow, shrink, base width 300px */
+  max-width: 600px; /* optional max width for each panel */
+}
+
+@media (max-width: 640px) {
+  .panels > .panel-1,
+  .panels > .panel-2 {
+    flex-basis: 100%;
+    max-width: none;
+  }
+}
