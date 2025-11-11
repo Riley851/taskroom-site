@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -43,49 +42,3 @@
 
 </body>
 </html>
-=======
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Background Timer with Popup</title>
-</head>
-<body>
-
-    <h2>Set Timer (in seconds)</h2>
-    <input type="number" id="timeInput" placeholder="Enter time in seconds" />
-    <button id="startButton">Start Timer</button>
-
-    <script>
-        let timer;
-        let remainingTime;
-
-        // Function to start the countdown timer
-        document.getElementById('startButton').addEventListener('click', function() {
-            const timeInput = document.getElementById('timeInput').value;
-
-            if (timeInput && timeInput > 0) {
-                remainingTime = parseInt(timeInput, 10); // Set the remaining time
-                startTimer(); // Start the countdown
-            } else {
-                alert("Please enter a valid time in seconds.");
-            }
-        });
-
-        // Function to handle the countdown in the background
-        function startTimer() {
-            // Run every second
-            timer = setInterval(function() {
-                remainingTime--; // Decrement time
-                if (remainingTime <= 0) {
-                    clearInterval(timer); // Stop the timer
-                    alert("Time's up!"); // Show a pop-up alert
-                }
-            }, 1000);
-        }
-    </script>
-
-</body>
-</html>
->>>>>>> Stashed changes
